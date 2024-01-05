@@ -28,7 +28,7 @@
   echo "#set up time" >> $runfile
   echo "begin=$(date +%s)" >> $runfile
   echo "module load gnu/parallel/20210422" >> $runfile
-  echo "mpirun MobCal_MPI_201.exe $mobinp" >> $runfile
+  echo "srun MobCal_MPI_201.exe $mobinp" >> $runfile
   echo "end=$(date +%s)" >> $runfile
   sbatch $runfile
   sleep 0.5s
